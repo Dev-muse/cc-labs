@@ -7,7 +7,7 @@ jobs:
     
     strategy: 
       matrix: 
-        python-version: [3.7,3.8,3.9,3.10,3.11]
+        python-version: [3.8, 3.9, '3.10', '3.11']
 
     steps:
     - name: checkout code
@@ -22,7 +22,7 @@ jobs:
       run: | 
         cd chapter4
         python -m pip install  --upgrade pip
-        if [-f requirements.txt]; then pip install -r requirements.txt; fi
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
     - name: run tests
       run: | 
