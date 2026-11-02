@@ -1,0 +1,12 @@
+name: ci workflow
+
+on: [push] #when it is triggered
+
+jobs: 
+  build:  #name of job
+    runs-on: ubuntu-latest #which os
+    steps: #sequential steps either uses action/ or run
+    - name: checkout code
+      uses: actions/checkout@v7
+    - name: testing workflow
+      run: echo workflow runs fine, welcome!
